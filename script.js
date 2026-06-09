@@ -2,7 +2,7 @@
 // AI Study Assistant (ALE)
 // =============================
 
-const API_KEY = "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";
+const API_KEY = prompt("Apni OpenRouter API Key yahan daalein:");
 const MODEL = "openrouter/free";
 
 const copyBtn = document.getElementById("copyBtn");
