@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Assistant - ALE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+
+    <div class="app-container">
+        <header class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Study AI (ALE)</span>
+            </div>
+            <div class="nav-actions">
+                <button id="menuBtn" class="icon-btn"><i class="fa-solid fa-gear"></i></button>
+            </div>
+        </header>
+
+        <div id="settingsPanel" class="settings-panel">
+            <h3>Settings</h3>
+            <hr>
+            <p>Choose Theme:</p>
+            <div class="theme-options">
+                <button id="darkTheme" class="theme-btn"><i class="fa-solid fa-moon"></i> Dark</button>
+                <button id="lightTheme" class="theme-btn"><i class="fa-solid fa-sun"></i> Light</button>
+            </div>
+            <hr>
+            <button id="clearBtn" class="panel-action-btn"><i class="fa-solid fa-trash"></i> Clear Chat</button>
+        </div>
+
+        <main class="chat-container">
+            <div id="answer" class="chat-log">
+                <div class="placeholder-message" id="placeholder">
+                    <div class="bot-img-wrapper large-avatar">
+                        <img src="Ale.jpg" alt="ALE Avatar" class="bot-custom-img">
+                    </div>
+                    <p>Hi! i m your AI Assistant ALE. You can ask me anything! 😊</p>
+                </div>
+            </div>
+            
+            <div id="loading" class="loading-dots-container" style="display: none;">
+                <div class="dot-pulse"></div>
+                <div class="dot-pulse"></div>
+                <div class="dot-pulse"></div>
+                <span>Thinking...</span>
+            </div>
+        </main>
+
+        <footer class="input-container">
+            <div class="input-wrapper">
+                <textarea id="question" rows="1" placeholder="Type your question here..."></textarea>
+                <button id="askBtn" class="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+            <div class="input-footer-actions">
+                <button id="copyBtn" class="action-link-btn"><i class="fa-solid fa-copy"></i> Copy Last Response</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
